@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Starbucks</title>
+</head>
+<body>
+<section>
+	<div class="circle"></div>
+
+<!-- ---header--- -->
+
+	<header>
+		<a href="#"><img src="images/logo.png" class="logo"></a>
+		<div class="toggle" onclick="togglemenu();"></div>
+		<ul class="navigation">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Menu</a></li>
+			<li><a href="#">What's New</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</header>
+
+<!-- ---content--- -->
+
+	<div class="content">
+		<div class="textbox">
+			<h2>It's not just a coffee,<br>It's <span>Starbucks</span></h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+		       <a href="#">LEARN MORE</a>
+		</div>       
+		  <div class="imgbox">
+		  	<img src="images/green.png" class="Starbucks">
+		   </div>
+	</div>
+
+<!-- ---thumb---- -->
+
+	<ul class="thumb">
+		<li><img src="images/green1.png" onclick="imgSlider('images/green1.png');changrColorCircle('#017143') "></li>
+		<li><img src="images/lp1.png" onclick="imgSlider('images/lp1.png');changrColorCircle('#eb7495')"></li>
+		<li><img src="images/p1.png" onclick="imgSlider('images/p1.png');changrColorCircle('#d752b1')"></li>
+	</ul>
+	<ul class="sci">
+		<li><a href="#"><img src="images/fb.png"></a></li>
+		<li><a href="#"><img src="images/tw1.png"></a></li>
+		<li><a href="#"><img src="images/ig.png"></a></li>
+	</ul>
+</section>
+
+<!-- ---footer--- -->
+
+<div class="footer">
+	<hr>
+	<h3>coffee@starbucks.com</h3>
+	<br>
+	<img src="images/fb.png">
+	<img src="images/ig.png">
+	<img src="images/tw.png">
+	<p>All Copyrights Reserved @ 2021</p>
+	<p>Made By - Rishi</p>
+</div>
+
+<!-- ---javascript--- -->
+
+<script type="text/javascript">
+	function imgSlider(anything){
+		document.querySelector('.Starbucks').src = anything;
+	}
+	function changrColorCircle(color){
+		const circle = document.querySelector('.circle')
+		circle.style.background = color;
+	}
+	function toggleMenu(){
+		var menuToggle = document.querySelector('.toggle');
+		var navigation = document.querySelector('.navigation')
+		menuToggle.classList.toggle('active')
+		navigation.classList.toggle('active')
+	}
+</script>
+</body>
+</html>
